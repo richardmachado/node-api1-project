@@ -116,5 +116,6 @@ server.put('/api/users/:id', (req, res) => {
 });
 
 
-const port = 5000;
-server.listen(port, () => console.log(`\n** API on port ${port} \n`));
+// dynamic port 
+const port = process.env.PORT || 7000;
+server.listen(port, () => console.log(`\n ** running on port ${port} `))
